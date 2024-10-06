@@ -27,7 +27,7 @@ const PieChart: FC<State> = (props) => {
 		}, { boy: 0, girl: 0 })
 
 		return {
-			labels: ["Số nữ", "Số nam"],
+			labels: ["Số con gái", "Số con trai"],
 			datasets: [
 				{
 					label: 'Kiểm tra',
@@ -44,7 +44,7 @@ const PieChart: FC<State> = (props) => {
 		plugins: {
 			title: {
 				display: true,
-				text: 'Tổng số nam và nữ qua các lần kiểm tra'
+				text: 'Tổng số con trai và con gái qua các lần kiểm tra'
 			},
 			legend: {
 				position: 'top',

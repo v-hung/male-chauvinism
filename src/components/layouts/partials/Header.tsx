@@ -8,7 +8,7 @@ const Header: FC<State> = (props) => {
 
 	return (
 		<div {...rest} className={twMerge('bg-white z-30 border-b py-4 px-6 h-14', className)}>
-			<h1 className="md:text-lg font-semibold">Trọng nam kinh nữ</h1>
+			<h1 className="md:text-lg font-semibold">Trọng nam khinh nữ</h1>
 		</div>
 	)
 }

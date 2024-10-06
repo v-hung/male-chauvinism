@@ -47,12 +47,12 @@ const StackedBarChart: FC<State> = (props) => {
 			labels: data.map((_, i) => `Lần ${i + 1}`),
 			datasets: [
 				{
-					label: 'Số nữ',
+					label: 'Số con gái',
 					data: counts.map(v => v.girl),
 					backgroundColor: "#ef4444",
 				},
 				{
-					label: 'Số nam',
+					label: 'Số con trai',
 					data: counts.map(v => v.boy),
 					backgroundColor: "#06b6d4",
 				}
@@ -66,7 +66,7 @@ const StackedBarChart: FC<State> = (props) => {
 			plugins: {
 				title: {
 					display: true,
-					text: 'Số nam và nữ qua từng lần kiểm tra'
+					text: 'Số con trai và con gái qua từng lần kiểm tra'
 				},
 				datalabels: {
 					display: showDatalabels.current,

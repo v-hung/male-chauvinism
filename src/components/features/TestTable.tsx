@@ -44,8 +44,8 @@ const TestTable: FC<State> = (props) => {
 				<Table>
 					<Table.Head className='sticky top-0'>
 						<Table.HeadCell className='p-2 sm:px-4 sm:py-3 md:px-6 md:py-4'>Thứ tự</Table.HeadCell>
-						<Table.HeadCell className='p-2 sm:px-4 sm:py-3 md:px-6 md:py-4'>Số nam</Table.HeadCell>
-						<Table.HeadCell className='p-2 sm:px-4 sm:py-3 md:px-6 md:py-4'>Số nữ</Table.HeadCell>
+						<Table.HeadCell className='p-2 sm:px-4 sm:py-3 md:px-6 md:py-4'>Số con trai</Table.HeadCell>
+						<Table.HeadCell className='p-2 sm:px-4 sm:py-3 md:px-6 md:py-4'>Số con gái</Table.HeadCell>
 						<Table.HeadCell className='p-2 sm:px-4 sm:py-3 md:px-6 md:py-4 w-0'>Biểu đồ</Table.HeadCell>
 					</Table.Head>
 					<Table.Body className="divide-y">
