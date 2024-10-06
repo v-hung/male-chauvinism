@@ -18,7 +18,7 @@ const Home = () => {
 	const isCompleted = useRef(false)
 
 	const [numberOfFamilies, setNumberOfFamilies] = useState(100)
-	const [numberOfTests, setNumberOfTests] = useState(10)
+	const [numberOfTests, setNumberOfTests] = useState(1)
 	const [membershipLimit, setMembershipLimit] = useState(1)
 	const [limit, setLimit] = useState(false)
 
@@ -50,7 +50,7 @@ const Home = () => {
 
 	const handelClear = () => {
 		setNumberOfFamilies(100)
-		setNumberOfTests(10)
+		setNumberOfTests(1)
 		setMembershipLimit(1)
 		setLimit(false)
 		setData([])
