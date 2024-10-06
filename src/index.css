@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+
+  body {
+    /* font-family: "Poppins", sans-serif; */
+    color: #333;
+  }
+
+  [type="text"],
+  [type="email"],
+  [type="url"],
+  [type="password"],
+  [type="number"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="search"],
+  [type="tel"],
+  [type="time"],
+  [type="week"],
+  [multiple],
+  textarea,
+  select {
+    @apply bg-transparent border-gray-300 text-sm p-2.5 !pr-6;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"][type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  svg {
+    @apply fill-current;
+  }
+
+  .ql-align-center img {
+    @apply mx-auto;
+  }
+}
+
+@layer components {
+  .link {
+    @apply hover:text-primary-600 cursor-pointer;
+  }
+
+  .link.disabled {
+    @apply pointer-events-none text-gray-500;
+  }
+
+  .icon {
+    @apply block w-6 h-6;
+  }
+  .icon svg {
+    @apply !w-full !h-full !fill-current;
+  }
+
+  .border-dashed-animation {
+    background: linear-gradient(
+        90deg,
+        theme("colors.primary.500") 50%,
+        transparent 50%
+      ),
+      linear-gradient(90deg, theme("colors.primary.500") 50%, transparent 50%),
+      linear-gradient(0deg, theme("colors.primary.500") 50%, transparent 50%),
+      linear-gradient(0deg, theme("colors.primary.500") 50%, transparent 50%);
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 15px 4px, 15px 4px, 4px 15px, 4px 15px;
+    background-position: 0px 0px, 200px 100px, 0px 100px, 200px 0px;
+    animation: border-dance 10s infinite linear;
+  }
+
+  @keyframes border-dance {
+    0% {
+      background-position: 0 0, 100% 100%, 0 100%, 100% 0;
+    }
+    100% {
+      background-position: 100% 0, 0 100%, 0 0, 100% 100%;
+    }
+  }
+}
