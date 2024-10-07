@@ -25,12 +25,12 @@ export function runTest(params: TestParams) : Promise<TestResult> {
 				girl = 1
 
 				while (!gender && numberOfTimes < params.membershipLimit) {
-					if (!boy) {
-						boy = 1
-					}
-					
 					girl += 1
 					gender = Math.random() >= 0.5 ? 1 : 0
+
+					if (gender) {
+						boy = 1
+					}
 
 					numberOfTimes++
 				}
